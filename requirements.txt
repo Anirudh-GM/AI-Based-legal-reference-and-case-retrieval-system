@@ -1,0 +1,9 @@
+langchain
+langchain-community
+unstructured
+pdfminer.six
+python-docx
+docx2txt
+reportlab
+datasets
+tqdm
