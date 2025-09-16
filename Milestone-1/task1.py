@@ -1,108 +1,98 @@
 import os
-import json
 from langchain_community.document_loaders import (
     TextLoader,
     PyPDFLoader,
-    UnstructuredHTMLLoader,
+    UnstructuredWordDocumentLoader,
+    UnstructuredHTMLLoader
 )
-from langchain_community.document_loaders import Docx2txtLoader
-from langchain.text_splitter import CharacterTextSplitter
+from langchain.text_splitter import RecursiveCharacterTextSplitter
 
-# Extra imports for saving
+# For saving in docx
 from docx import Document
+# For saving in PDF
 from reportlab.platypus import SimpleDocTemplate, Paragraph
 from reportlab.lib.styles import getSampleStyleSheet
 
 # Input & output folders
-input_folder = r"E:\BE\AI Based legal reference and case retrieval system\data"
-output_folder = r"E:\BE\AI Based legal reference and case retrieval system\output_chunks"
+INPUT_DIR = "data"
+OUTPUT_DIR = "output_chunks"
+os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-# Create output folder if it doesn't exist
-os.makedirs(output_folder, exist_ok=True)
-
-# Chunk parameters
-splitter = CharacterTextSplitter(chunk_size=2000, chunk_overlap=200)
+# Chunk splitter
+splitter = RecursiveCharacterTextSplitter(chunk_size=2000, chunk_overlap=200)
 
 
-def load_document(file_path):
-    """Choose the correct loader based on file extension"""
-    ext = file_path.split('.')[-1].lower()
+def load_file(file_path):
+    """Load file based on extension"""
+    ext = os.path.splitext(file_path)[1].lower()
 
-    if ext == "txt":
-        loader = TextLoader(file_path, encoding="utf-8")
-    elif ext == "pdf":
-        loader = PyPDFLoader(file_path)
-    elif ext == "docx":
-        loader = Docx2txtLoader(file_path)
-    elif ext == "html":
-        loader = UnstructuredHTMLLoader(file_path)
+    if ext == ".txt":
+        try:
+            return TextLoader(file_path, encoding="utf-8").load(), ext
+        except Exception:
+            return TextLoader(file_path, encoding="latin-1").load(), ext
+    elif ext == ".pdf":
+        return PyPDFLoader(file_path).load(), ext
+    elif ext == ".docx":
+        return UnstructuredWordDocumentLoader(file_path).load(), ext
+    elif ext == ".html":
+        return UnstructuredHTMLLoader(file_path).load(), ext
     else:
-        raise ValueError(f"❌ Unsupported file type: {ext}")
-    return loader.load(), ext
+        raise ValueError(f"Unsupported file type: {ext}")
 
 
-def save_output(chunks, base_name, ext):
-    """Save chunks back into the same format as input"""
-    output_path = os.path.join(output_folder, f"{base_name}_chunks.{ext}")
+def save_chunks(chunks, output_file, ext):
+    """Save the chunks in the same format as the original file"""
+    numbered_chunks = [f"Chunk {i+1}:\n{chunk.page_content.strip()}" for i, chunk in enumerate(chunks)]
 
-    if ext == "txt":
-        with open(output_path, "w", encoding="utf-8") as f:
-            f.write("\n\n".join(chunks))
+    if ext == ".txt":
+        with open(output_file, "w", encoding="utf-8") as f:
+            f.write("\n\n".join(numbered_chunks))
 
-    elif ext == "json":
-        with open(output_path, "w", encoding="utf-8") as f:
-            json.dump({"chunks": chunks}, f, indent=2, ensure_ascii=False)
-
-    elif ext == "docx":
+    elif ext == ".docx":
         doc = Document()
-        for chunk in chunks:
-            doc.add_paragraph(chunk)
-        doc.save(output_path)
+        for chunk_text in numbered_chunks:
+            doc.add_paragraph(chunk_text)
+        doc.save(output_file)
 
-    elif ext == "pdf":
-        doc = SimpleDocTemplate(output_path)
+    elif ext == ".pdf":
+        doc = SimpleDocTemplate(output_file)
         styles = getSampleStyleSheet()
-        story = [Paragraph(chunk, styles["Normal"]) for chunk in chunks]
+        story = [Paragraph(chunk_text, styles["Normal"]) for chunk_text in numbered_chunks]
         doc.build(story)
 
-    elif ext == "html":
-        with open(output_path, "w", encoding="utf-8") as f:
+    elif ext == ".html":
+        with open(output_file, "w", encoding="utf-8") as f:
             f.write("<html><body>\n")
-            for chunk in chunks:
-                f.write(f"<h3>{chunk.split(':',1)[0]}</h3><p>{chunk.split(':',1)[1]}</p>\n")
+            for chunk_text in numbered_chunks:
+                # Split first line as heading if possible
+                lines = chunk_text.split("\n", 1)
+                title = lines[0] if len(lines) > 0 else ""
+                content = lines[1] if len(lines) > 1 else ""
+                f.write(f"<h3>{title}</h3><p>{content}</p>\n")
             f.write("</body></html>")
 
     else:
-        raise ValueError(f"❌ Saving not implemented for: {ext}")
-
-    return output_path
+        raise ValueError(f"Saving not implemented for {ext}")
 
 
-def process_file(filename):
-    """Load, split into chunks, number them, and save in same format"""
-    file_path = os.path.join(input_folder, filename)
-    docs, ext = load_document(file_path)
+def process_files():
+    files = [f for f in os.listdir(INPUT_DIR) if os.path.isfile(os.path.join(INPUT_DIR, f))]
 
-    # Split into chunks
-    chunks = splitter.split_documents(docs)
-
-    # Add chunk numbers
-    numbered_chunks = [f"Chunk {i+1}:\n{chunk.page_content}" for i, chunk in enumerate(chunks)]
-
-    # Save output
-    base_name = os.path.splitext(filename)[0]
-    output_path = save_output(numbered_chunks, base_name, ext)
-
-    print(f"✅ Saved {len(numbered_chunks)} chunks for '{filename}' → '{output_path}'")
-
-
-def main():
-    for filename in os.listdir(input_folder):
+    for filename in files:
+        file_path = os.path.join(INPUT_DIR, filename)
         try:
-            process_file(filename)
+            docs, ext = load_file(file_path)
+            chunks = splitter.split_documents(docs)
+
+            output_file = os.path.join(OUTPUT_DIR, filename)
+            save_chunks(chunks, output_file, ext)
+
+            print(f"✅ Processed {filename} → {output_file} ({len(chunks)} chunks)")
+
         except Exception as e:
             print(f"❌ Failed to process {filename}: {e}")
 
 
 if __name__ == "__main__":
-    main()
+    process_files()

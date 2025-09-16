@@ -25,10 +25,14 @@ Knowing the facts
 in believing or disbelieving the testimony of witnesses and weighing it on a balance of
 probability. Judges are human, so the quirks of individual personalities may also play some
 part occasionally.45 The discretionary element is most significant in knowing how to state the
+
+Chunk 2:
+probability. Judges are human, so the quirks of individual personalities may also play some
+part occasionally.45 The discretionary element is most significant in knowing how to state the
 facts, for, as pointed out in Chapter 146, it is not knowledge of facts, but knowledge of how to
 state facts that is relevant; and this applies to the statement of facts of both the instant and the
 
-Chunk 2:
+Chunk 3:
 41 Bromley v. Bromley (1965) P 111 [1965] 3 All ER 226 See also Young v. North Riding Justices
 (1965) 1 QB 502 at 508, (1965) 1 All ER 141 at 143-144, where the omission from the revised version
 of a point included in the Justices of the Peace Report was considered; and R v. Cockburn [1968] 1 All
@@ -55,6 +59,10 @@ primary and secondary (or/inferential) facts: between saying, eg that A did so a
 a time in such a place and saying that A acted negligently. ‘Negligence’ is commonly treated
 as a question of fact, but since it is a matter of inference from a set of primary facts two couts
 may state the inferential fact differently while agreeing on the primary facts48
+
+Chunk 4:
+as a question of fact, but since it is a matter of inference from a set of primary facts two couts
+may state the inferential fact differently while agreeing on the primary facts48
 Secondly, there is knowledge of how to state facts at different levels of generality, which
 makes it possible for the deciding judge and a judge in a later case to make different
 statements of facts. Thus, A may have driven a Rolls Royce car at 30 mph through Piccadilly
@@ -74,12 +82,17 @@ only at this level of generality would the ruling become wide enough to cover th
 case49. On the other hand, another judge, wishing to impose liability for pecuniary loss
 would no doubt prefer the widest interpretation of A v. B, namely, the negligent infliction of
 damage.50
+
+Chunk 5:
+case49. On the other hand, another judge, wishing to impose liability for pecuniary loss
+would no doubt prefer the widest interpretation of A v. B, namely, the negligent infliction of
+damage.50
 Thirdly, it is necessary to know how to select the material facts. The fewer material facts
 included in a statement, the wider is its scope. In Rylands v. Fletcher51 the facts were as
 follows: (i) A had a reservoir built; (ii) A employed B to build it; (iii) A wasw not himself
 negligent; (iv) B was negligent; (v) water escaped woing to B’s negligent construction of the
 
-Chunk 3:
+Chunk 6:
 47 FA & AB Ltd v. Lupton (Inspector of Taxes) [1972] AC 634 at 659, 659, [1971] 3 All ER 948 at
 964, 965.
 48 Benmax v. Austin Motor Co Ltd. [1955] AC 370, [1955] 1 All ER 326.
@@ -105,6 +118,9 @@ employers were held liable for the death of one of their employees owing to the 
 another employee. At that date a servant could not hold his employer vicariously liable for an
 injury inflicted by a fellow-servant because of the prevailing doctrine of commonemployment, which has since been abolished. Therefore, to hold the employers liable, it was
 essential to the ratio decidendi to ignore the fact that the party at fault was a servant and to
+
+Chunk 7:
+essential to the ratio decidendi to ignore the fact that the party at fault was a servant and to
 say that the employers were being held liable, nor vicariously, but for the breach of a
 personal non-delegable duty to ensure that reasonable care would be taken. So stated, the rule
 would attach liability to the employer of even an independent contractor. In Davie v. New
@@ -122,7 +138,7 @@ reasonably foreseeable, and accordingly held that there was no answerability in 
 for damage by fire. In Wagon Mound (No. 2)57, however, brought by different plaintiffs but
 based on the same occurrence, the lower court stated that a bare possibility of fire might have
 
-Chunk 4:
+Chunk 8:
 52 Subsequent Interpretation of damage leaves open whether it includes personal injury: Miles v Forest
 Rock Granite Co (Leicestercsire) Ltd (1918) 34 TLR 500; Shiffmtan v. Order of St John [1936] 1 All
 ER 557 Hale v. Jenning’s [1938] 1 All ER 579; Perry v. Kendricks Transport Ltd [1956] 1 All ER 154,
@@ -149,6 +165,10 @@ opposite results in the same case, but also enabled the same court to reach oppo
 two cases based on the same happening.
  Fifthly, there is the art of knowing how to make different statements by taking different
 combinations of facts. The facts in Donoghue v. Stevenson58 may be listed as follows, (i) A
+
+Chunk 9:
+Fifthly, there is the art of knowing how to make different statements by taking different
+combinations of facts. The facts in Donoghue v. Stevenson58 may be listed as follows, (i) A
 was a manufacturer of ginger beer; (ii) A was assumed to have been negligent in that a snail
 was alleged to have been found in one of the bottles; (iii) acting under contract with a retailer,
 B, A delivered the tainted bottle to B without knowing that it contained a snail and thereby
@@ -168,13 +188,17 @@ intermediate examination the manufacturer proposition. Thirdly, on facts (ii), (
 (vii) it could be said that anyone who negligently misperforms a contract and physically
 damages a thirdly party, whom he ought reasonably to have contemplated as likely to be
 affected, is liable to such thirdly party in tort, though he would not be liable in contact.
+
+Chunk 10:
+damages a thirdly party, whom he ought reasonably to have contemplated as likely to be
+affected, is liable to such thirdly party in tort, though he would not be liable in contact.
 Fourthly, on facts (ii) and (vii) it could be said that anyone who negligently damages another,
 whom he ought reasonably to have contemplated as likely to be affected, it liable the
 neighbour proposition. Only in the light of later cases is it possible to determine the ratio
 decidendi of this important case. In recent years courts have come to regard the fourth
 proposition as being its ratio60, while previously they generally adopted the second61. It is
 
-Chunk 5:
+Chunk 11:
 58 [1932] AC 562.
 59 Not after Heyman v. Darwins [1942] AC 356 at 401, [1942] 1 ALL ER 337 at 361.
 60 Home office v. Dorset. Yacht co. ltd. [1970] AC 1004, [1970] 2 All ER 294; Anns v. Merton London
@@ -202,6 +226,10 @@ well as those involved in the instant dispute. Knowing the law in this context m
 how to extract the rationes decidendi from cases. Satatements not part of the ratio decidendi
 as obiter dicta and are not authoritative. Three shades of meaning can be attached to the
 expression ‘ratio decidendi’. The first, which is the translation of it, is the reason for (or of)
+
+Chunk 12:
+as obiter dicta and are not authoritative. Three shades of meaning can be attached to the
+expression ‘ratio decidendi’. The first, which is the translation of it, is the reason for (or of)
 deciding63. Even a finding of fact may in this sense be the ratio decidendi. Thus, a judge may
 state a rule and then decide that the facts do not fall within it. Secondly it may mean the rule
 of law proffered by the judge as the basis of his decision’; or thirdly, it may mean the rule of
@@ -216,7 +244,7 @@ sufficient’, said Jessel MR.
 That the case should have been decided on a principle if that principle is not itself a
 right principle, or one noe applicable to the case, and it is for a subsequent judge to
 
-Chunk 6:
+Chunk 13:
 62 ‘Wherever the court wishes to find for the plaintiff, that doctrine (the fourth proposition) will be
 invoked, just as it will be disregarded when the defendant is the favoured party: Landon in Pollock on
 Torts p 329.
@@ -246,12 +274,17 @@ required to accomplish the impossible. If it is not clear’, said Viscount Dune
 ‘then I do not think it is part of the tribunal’s duty to spell out with great
 difficulty a ratio decidendi in order to be bound by it68
 .
+
+Chunk 14:
+‘then I do not think it is part of the tribunal’s duty to spell out with great
+difficulty a ratio decidendi in order to be bound by it68
+.
 (3) It follows from what has previously been said that different rations may be
 extracted from a case depending on different ways of stating the facts.
 (4) More rarely, a judge may demote a proposition in a previous case from its status
 of ratio to that of dictum. Thus, the ‘neighbour’ proposition in Donoghue v.
 
-Chunk 7:
+Chunk 15:
 65 Osborne v. Rowlett (1880) 13 ChD 774 at 785. Lord Reid, in attempting to find the ratio decidendi
 of an earlier case, said ‘If I had to try, the result might depend on whether or not I was striving to
 obtain a narrow ratio: Scruttons Ltd. V. Midland Silicones Ltd. [1962] 1 All ER 1 at 12. Cf Devlin J
@@ -277,6 +310,11 @@ Stevenson used to change its category according to whether the plaintiff or the
 defendant was thought entitled to succeed69
 .
 (5) Certain types of cases do not deserve to be authorities. One type, already alluded
+
+Chunk 16:
+defendant was thought entitled to succeed69
+.
+(5) Certain types of cases do not deserve to be authorities. One type, already alluded
 to, is that in which there is no discoverable ratio decidendi. Others are cases
 turning purely on facts70, those involving the exercise of discretion71, and those
 which judges themselves to not think worthy of being precedents72. Decisions on
@@ -299,9 +337,13 @@ accordingly win, and if it is accepted that no ruling can be ratio unless it sup
 made, then the decision on point A is obiter. Even as a dictum it may nevertheless carry such
 authority that a subsequent tribunal may feel obliged to follow it. If so, the nomenclature
 ratio decidendi or obiter dictum for the decision on point A crease to matter. In Hedley Byrne
+
+Chunk 17:
+authority that a subsequent tribunal may feel obliged to follow it. If so, the nomenclature
+ratio decidendi or obiter dictum for the decision on point A crease to matter. In Hedley Byrne
 & Co. Ltd. V. Heller & Partners Ltd.76 the House of Lords overthrew a rule by virtue of
 
-Chunk 8:
+Chunk 18:
 69 See Fairman v. Pertetual Investment. Burlding Society [1923] AC 74, as interpreted by Scott LJ in
 Haseldine v. CA Daw & Son Ltd. [1941] 2 KB 343, [1941] 3 All ER 156, and in Doylan v. Dublin
 Corpn [1949] IR 60, and in Pearson v. Lambeth Borough Council [1950] 2 KB 353, [1950] 1 All ER
@@ -327,6 +369,10 @@ which the defendant had succeeded in the court of appeal and propounded a differ
 but with a qualification attached so that the defendant was still able to win. This rule and
 qualification together constitute the ratio; but even if it were said to be a dictum, the
 distinction is immaterial at this level of authority.
+
+Chunk 19:
+qualification together constitute the ratio; but even if it were said to be a dictum, the
+distinction is immaterial at this level of authority.
 A judge may embark upon a line of reasoning involving a rule which justifies a certain
 conclusion. He may then proceed along another line of reasoning involving a different rule,
 wider on narrower, which also justifies that conclusion77. Lord simonds once declared that if
@@ -347,6 +393,10 @@ proposition which is merely a proposition of law assumed by the [Board] to be co
 purpose of that particular case14.
 These complications multiply in appellate tribunals where there is a plurality of
 judgments. It may happen that all the judges agree in the result for different reasons. Suppose
+
+Chunk 20:
+These complications multiply in appellate tribunals where there is a plurality of
+judgments. It may happen that all the judges agree in the result for different reasons. Suppose
 that each of five judges gives a different reasons for arriving at the same result and without
 disagreeing with the reasons given and a subsequent tribunal may be said to have five
 competing retiones and a subsequent tribunal may adopt any of them for the purpose of
@@ -361,7 +411,7 @@ Where the majority differ in their reasons while the minority agree on the reaso
 dissent, it is difficult to say what the discretion17. Finally, if a case has more than one issue
 and the tribunal is not that arise cannot be resolved by any test. The judge in a subsequent
 
-Chunk 9:
+Chunk 21:
 77 Eg Denning LJ in Broom v. Morgan [1953] 1 QB 597 at 609-610, [1953] 1 All ER 849 at 854-855.
 78 Jacobs v. LCC [1950] AC 361 at 369-371, [1950] 1 All ER 737 at 741-742. To the same effect, Lord
 Bramwell in Membery v. Great Western Rly co. (1889) 14 App Gas 179 at 187; Lord MacNaghten in
@@ -386,6 +436,10 @@ status of dicta by interpretation. The distinction in such cases between ratio a
 a device employed by subsequent courts for the adoption or rejection of doctrine expressed in
 previous cases according to the inclination of the judges. An example would be the treatment
 of Lord Atkin’s neighbour’ proposition in subsequent cases.
+
+Chunk 22:
+previous cases according to the inclination of the judges. An example would be the treatment
+of Lord Atkin’s neighbour’ proposition in subsequent cases.
 The weight accorded to dicta varies with the type of dictum. Mere casual expressions carry
 no weight at all. ‘Not every passing expression of a judge, however eminent, can be treated
 as an ex cathedra statement1. On the other hand, dicta which have been acted upon over the
@@ -407,6 +461,10 @@ ceases to have any effect at all. The situation is different if the case is affi
 an appellate court on a different point from that on which the decision in the lower court was
 based. In one case, Master of the Rolls said that in such a situation the previous decision will
 be of no effect at all5. This probably goes too far, and in another case it was said that the first
+judgment remains binding6. The truth seems to be that in such a situation a later court has
+freedom to deal as it pleases with the earlier decision.
+
+Chunk 23:
 judgment remains binding6. The truth seems to be that in such a situation a later court has
 freedom to deal as it pleases with the earlier decision.
 Refusal to follow 
@@ -433,6 +491,10 @@ clear cut when viewed from afar, but less so when one actually gets into it. A j
 the first place, restate the factual part of the precedent by lowering the level of generality in
 order to effect the necessary distinction. ‘A case is only an authority for what it actually
 decides. I entirely deny that it can be quoted for a proposition that may seem to follow
+
+Chunk 24:
+order to effect the necessary distinction. ‘A case is only an authority for what it actually
+decides. I entirely deny that it can be quoted for a proposition that may seem to follow
 logically from it’: so said Lord Halsbury10, and this words are classic authority for this
 particular distinguishing technique. The two decisions then, as Lord Simon put it, are like
 ‘binary starts each part of which lives within the field of the other and is essentially
@@ -452,6 +514,11 @@ or care to avow14.
  On occasions it may be difficult to decide whether a case has been overruled in a
 subsequent decision, or merely distinguished. Where the House of Lords, for example, has
 commented adversely on earlier decisions of inferior courts, there is often a great deal of
+discretion for future courts in deciding whether the House of Lords has by its comments 
+Justice In Deciding Disputes: Precedent
+92
+
+Chunk 25:
 discretion for future courts in deciding whether the House of Lords has by its comments 
 Justice In Deciding Disputes: Precedent
 92
@@ -477,6 +544,10 @@ Polemis and Furness, Withy & Co. Ltd.18 was disapproved by the Privy Council in 
 Wagon Mound19, but although it has never been overruled, it has been declared to be no
 longer law in the light of the change in the law of remoteness of damage that had taken place.
 There is also a strong suggestion in The Heron II20 that The Parana1, which had laid down a
+
+Chunk 26:
+longer law in the light of the change in the law of remoteness of damage that had taken place.
+There is also a strong suggestion in The Heron II20 that The Parana1, which had laid down a
 rule for assessing damages in the bygone days of sailing ships, had ceased to be law in the
 conditions of modern transport. When sterling changed from being a stable to a floating
 currency and after Britain’s entry into the EEC, the Court of Appeal departed from the rule
@@ -495,6 +566,10 @@ otherwise binding precendent on the ground that the reason which led to the form
 the rule embodied in such precedent seems to the court to have lost cogency; (4) the maxim
 in reality reflects the process of legal reasoning whereby a previous authority is judicially
 distinguished or an exception is made to a principal legal rule; (5) an otherwise binding
+precedent or rule may, on proper analysis, be held to have been impliedly overruled by a
+subsequent decision of a higher court or impliedly abrogated by an Act of Parliament; but
+
+Chunk 27:
 precedent or rule may, on proper analysis, be held to have been impliedly overruled by a
 subsequent decision of a higher court or impliedly abrogated by an Act of Parliament; but 
 Justice In Deciding Disputes: Precedent
@@ -519,6 +594,10 @@ reversed, as when the ratio is overthrown by superior authority in another case 
 still time within which to appeal in the first case, and an appeal is then lodged against the
 decision, which is duly reversed8. It is also possible for a case to be first reversed and then
 overruled, as when the decision is reversed on appeal on some other point without affecting
+
+Chunk 28:
+decision, which is duly reversed8. It is also possible for a case to be first reversed and then
+overruled, as when the decision is reversed on appeal on some other point without affecting
 the ratio, and the ratio is then overthrown in another case. If a case is overruled and the
 overruling case is itself reversed9, or overruled10, the first will revive. Statutory repeal
 operates prospectively, unless the statute itself subsequently overruled by statute. Does case
@@ -536,6 +615,10 @@ recent decision before it has been acted on. Fourthly, overruling should rarely 
 matters of statutory construction according to two of their Lordship, but two others thought
 the earlier case to have been wrongly decided, only a minority were prepared to overrule it17.
  Circumstances which might tend to strengthen the authority of a case and which would
+work against it being overruled are the unanimity of the court, the eminence of the judges
+who composed it, the approval of the decision in later cases and by the profession at large,
+
+Chunk 29:
 work against it being overruled are the unanimity of the court, the eminence of the judges
 who composed it, the approval of the decision in later cases and by the profession at large,
 the evidence in the report that the issue was fully and carefully argued by counsel and that the
@@ -560,6 +643,10 @@ stare decisis.
  That effect of overruling is retroactive except that it does not unsettle matters which are
 res judicata as between the parties to the overruled decision, and accounts which have been
 settled20. Retroactivity is logically reconcilable with the theory that judges do not make law
+
+Chunk 30:
+res judicata as between the parties to the overruled decision, and accounts which have been
+settled20. Retroactivity is logically reconcilable with the theory that judges do not make law
 but only declare what always has been law on the hypothesis that the overruled decision was
 an erroneous declaration of the law and hence void ab initio. This reason may be an ex post
 facto rationalisation. A more fundamental reason seems equally plausible, namely that just
@@ -577,6 +664,10 @@ the basis of a different law made ex post facto. This consideration weighs power
 overruling except for compelling reasons. A suggestion that merits serious attention is that
 overruling, like repeal, should take effect for the future only, and that the decision in the
 instant case should abide by the previous law for the last time1. The objections do not appear
+to be conclusive. It might be said that if the new rule, which is to supplant the old, does not
+support the actual decision it can only be a dictum. This might be countered by the argument
+
+Chunk 31:
 to be conclusive. It might be said that if the new rule, which is to supplant the old, does not
 support the actual decision it can only be a dictum. This might be countered by the argument
 that the tribunal is only freeing itself for the future from any constraining effect of its own
