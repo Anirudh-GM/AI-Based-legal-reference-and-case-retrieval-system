@@ -7,3 +7,4 @@ docx2txt
 reportlab
 datasets
 tqdm
+sentence-transformers
