@@ -9,3 +9,10 @@ datasets
 tqdm
 sentence-transformers
 langchain-huggingface
+pinecone-client
+python-dotenv
+pinecone
+langchain-pinecone
+langchain 
+langchain-core
+langchain-community
