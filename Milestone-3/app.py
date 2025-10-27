@@ -555,75 +555,105 @@ def handle_chat():
 
     st.markdown(f"<div class='chat-header'>Welcome, {user[1]} 👋 Ask your question below ⚖️</div>", unsafe_allow_html=True)
 
-    # Load conversation messages if existing
+    # Load previous messages if conversation exists
     if st.session_state.current_conversation:
         st.session_state.messages = get_messages(st.session_state.current_conversation)
     else:
         st.session_state.messages = []
 
-    # Display past messages
+    # Display chat history
     for msg in st.session_state.messages:
         with st.chat_message(msg["role"]):
             st.markdown(msg["content"])
 
-    query = st.chat_input("Type your legal question...")
+    query = st.chat_input("Type your legal question or say hello...")
 
-    if query:
-        if not st.session_state.current_conversation:
-            title = (query[:30] + "...") if len(query) > 30 else query
-            st.session_state.current_conversation = create_conversation(user[0], title)
+    if not query:
+        return
 
-        # Save user message
-        add_message(st.session_state.current_conversation, "user", query)
-        st.session_state.messages.append({"role": "user", "content": query})
-        with st.chat_message("user"):
-            st.markdown(query)
+    # Create new conversation if needed
+    if not st.session_state.current_conversation:
+        title = (query[:30] + "...") if len(query) > 30 else query
+        st.session_state.current_conversation = create_conversation(user[0], title)
 
-        # ------------------ Retrieve Relevant Legal Context ------------------
-        context_combined = ""
-        if retriever:
-            try:
-                context_docs = retriever.get_relevant_documents(query)
-                if context_docs:
-                    context_combined = "\n\n".join([f"{i+1}. {doc.page_content}" for i, doc in enumerate(context_docs)])
-            except Exception as e:
-                st.warning(f"Error fetching legal documents: {e}")
+    # Save user message
+    add_message(st.session_state.current_conversation, "user", query)
+    st.session_state.messages.append({"role": "user", "content": query})
+    with st.chat_message("user"):
+        st.markdown(query)
 
-        # Include conversation history
-        history_text = "\n".join([f"{m['role'].capitalize()}: {m['content']}" for m in st.session_state.messages])
-        full_context = history_text
-        if context_combined:
-            full_context += "\n\n**Relevant Legal Documents:**\n" + context_combined
+    # ====================== Casual or Legal Intent Classification ======================
+    intent_prompt = PromptTemplate(
+        input_variables=["query"],
+        template=(
+            "Classify the following user message as either 'legal' or 'casual'. "
+            "Respond with one word only: legal or casual.\n\n"
+            "Message: {query}"
+        ),
+    )
+    intent_chain = LLMChain(llm=llm, prompt=intent_prompt)
+    try:
+        intent = intent_chain.run({"query": query}).strip().lower()
+    except Exception:
+        intent = "legal"
 
-        # Adjust query for specific instructions
-        adjusted_query = query
-        if any(keyword in query.lower() for keyword in ["difference", "compare"]):
-            adjusted_query += "\nPlease clearly outline key differences using bullet points or headings."
-
-        # ------------------ Generate LLM Response ------------------
-        add_disclaimer = is_legal_question(query)
-
+    # ====================== If Casual → Skip Retrieval, Just Chat ======================
+    if "casual" in intent:
+        chat_prompt = (
+            "You are LegalBot ⚖️, an AI legal research assistant. "
+            "If the user greets you, asks who you are, or makes small talk, respond warmly and naturally. "
+            "Briefly introduce yourself and what you can do (help with laws, legal summaries, etc.). "
+            "Keep it friendly but professional.\n\n"
+            f"User: {query}"
+        )
+        response = llm.predict(chat_prompt)
         with st.chat_message("assistant"):
-            with st.spinner("Thinking..."):
-                try:
-                    response = llm_chain.run({"context": full_context, "query": adjusted_query})
-                except Exception as e:
-                    st.error(f"LLM error: {e}")
-                    response = "Sorry, I couldn't generate a response right now."
+            st.markdown(response)
+        add_message(st.session_state.current_conversation, "assistant", response)
+        st.session_state.messages.append({"role": "assistant", "content": response})
+        return
 
-                # Add disclaimer if legal question
-                if add_disclaimer:
-                    response += (
-                        "\n\n⚖️ **Legal Disclaimer:** This information is for research purposes only. "
-                        "I am not a licensed attorney, and this does not constitute legal advice. "
-                        "For matters affecting your legal rights, please consult a qualified attorney."
-                    )
+    # ====================== Retrieve Relevant Legal Context ======================
+    context_combined = ""
+    if retriever:
+        try:
+            context_docs = retriever.get_relevant_documents(query)
+            if context_docs:
+                context_combined = "\n\n".join(
+                    [f"{i+1}. {doc.page_content}" for i, doc in enumerate(context_docs)]
+                )
+        except Exception as e:
+            st.warning(f"Error fetching legal documents: {e}")
 
-                # Display & save
-                st.markdown(response)
-                add_message(st.session_state.current_conversation, "assistant", response)
-                st.session_state.messages.append({"role": "assistant", "content": response})
+    history_text = "\n".join([f"{m['role'].capitalize()}: {m['content']}" for m in st.session_state.messages])
+    full_context = history_text
+    if context_combined:
+        full_context += "\n\n**Relevant Legal Documents:**\n" + context_combined
 
+    adjusted_query = query
+    if any(keyword in query.lower() for keyword in ["difference", "compare"]):
+        adjusted_query += "\nPlease clearly outline key differences using bullet points or headings."
+
+    add_disclaimer = is_legal_question(query)
+
+    with st.chat_message("assistant"):
+        with st.spinner("Thinking..."):
+            try:
+                response = llm_chain.run({"context": full_context, "query": adjusted_query})
+            except Exception as e:
+                st.error(f"LLM error: {e}")
+                response = "Sorry, I couldn't generate a response right now."
+
+            if add_disclaimer:
+                response += (
+                    "\n\n⚖️ **Legal Disclaimer:** This information is for research purposes only. "
+                    "I am not a licensed attorney, and this does not constitute legal advice. "
+                    "For matters affecting your legal rights, please consult a qualified attorney."
+                )
+
+            st.markdown(response)
+            add_message(st.session_state.current_conversation, "assistant", response)
+            st.session_state.messages.append({"role": "assistant", "content": response})
 
 
 
