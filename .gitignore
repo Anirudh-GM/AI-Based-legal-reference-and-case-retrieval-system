@@ -19,3 +19,8 @@ Thumbs.db
 
 # Environment variables
 .env
+
+
+profile_pics/
+
+users.db
