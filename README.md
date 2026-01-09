@@ -89,4 +89,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Developed by [Your Name] | [GitHub Profile](https://github.com/Anirudh-GM)
+Developed by [Anirudh G M] | [GitHub Profile](https://github.com/Anirudh-GM)
