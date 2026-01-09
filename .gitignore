@@ -21,6 +21,8 @@ Thumbs.db
 .env
 
 
-profile_pics/
+# Ignore user database
+Milestone-3/users.db
 
-users.db
+# Ignore uploaded profile pictures
+Milestone-3/profile_pics/
